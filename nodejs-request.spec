@@ -1,13 +1,13 @@
 %define		pkg	request
 Summary:	Simplified HTTP request client
 Name:		nodejs-%{pkg}
-Version:	2.9.202
+Version:	2.9.203
 Release:	1
 License:	ASL 2.0
 Group:		Development/Libraries
 URL:		https://github.com/mikeal/request
 Source0:	http://registry.npmjs.org/%{pkg}/-/%{pkg}-%{version}.tgz
-# Source0-md5:	28acbdfd3c3feff9d799ce8b7cd760e6
+# Source0-md5:	33e259c61708d103466d3b096852a275
 BuildRequires:	rpmbuild(macros) >= 1.634
 Requires:	nodejs
 BuildArch:	noarch

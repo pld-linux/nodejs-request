@@ -1,15 +1,25 @@
 %define		pkg	request
 Summary:	Simplified HTTP request client
 Name:		nodejs-%{pkg}
-Version:	2.9.203
+Version:	2.30.0
 Release:	1
-License:	ASL 2.0
+License:	Apache v2.0
 Group:		Development/Libraries
 URL:		https://github.com/mikeal/request
 Source0:	http://registry.npmjs.org/%{pkg}/-/%{pkg}-%{version}.tgz
-# Source0-md5:	33e259c61708d103466d3b096852a275
+# Source0-md5:	b71428776c83883d4a828c6991b2e037
 BuildRequires:	rpmbuild(macros) >= 1.634
-Requires:	nodejs
+Requires:	nodejs >= 0.8.0
+Requires:	nodejs-forever-agent < 0.6.0
+Requires:	nodejs-forever-agent >= 0.5.0
+Requires:	nodejs-json-stringify-safe < 5.1.0
+Requires:	nodejs-json-stringify-safe >= 5.0.0
+Requires:	nodejs-mime < 1.3.0
+Requires:	nodejs-mime >= 1.2.9
+Requires:	nodejs-qs < 0.7.0
+Requires:	nodejs-qs >= 0.6.0
+Requires:	nodejs-uuid < 1.5.0
+Requires:	nodejs-uuid >= 1.4.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,7 +34,7 @@ mv package/* .
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{nodejs_libdir}/%{pkg}
-cp -pr *.js vendor package.json $RPM_BUILD_ROOT%{nodejs_libdir}/%{pkg}
+cp -pr *.js lib package.json $RPM_BUILD_ROOT%{nodejs_libdir}/%{pkg}
 
 %clean
 rm -rf $RPM_BUILD_ROOT

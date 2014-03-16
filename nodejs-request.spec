@@ -2,7 +2,7 @@
 Summary:	Simplified HTTP request client
 Name:		nodejs-%{pkg}
 Version:	2.30.0
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Development/Libraries
 URL:		https://github.com/mikeal/request
@@ -18,8 +18,8 @@ Requires:	nodejs-mime < 1.3.0
 Requires:	nodejs-mime >= 1.2.9
 Requires:	nodejs-qs < 0.7.0
 Requires:	nodejs-qs >= 0.6.0
-Requires:	nodejs-uuid < 1.5.0
-Requires:	nodejs-uuid >= 1.4.0
+Requires:	nodejs-node-uuid < 1.5.0
+Requires:	nodejs-node-uuid >= 1.4.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

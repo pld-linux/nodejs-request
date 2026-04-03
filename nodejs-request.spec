@@ -2,7 +2,7 @@
 Summary:	Simplified HTTP request client
 Name:		nodejs-%{pkg}
 Version:	2.30.0
-Release:	2
+Release:	3
 License:	Apache v2.0
 Group:		Development/Libraries
 URL:		https://github.com/mikeal/request
